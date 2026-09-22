@@ -1,14 +1,21 @@
 import pandas as pd
-
+import io
+import requests
 
 OWID_AGE_URL = "https://ourworldindata.org/grapher/cantril-ladder-age-groups.csv"
 
 def load_owid_age_data():
     """Carrega e prepara os dados de felicidade da OWID por faixa etária."""
 
-    df = pd.read_csv(OWID_AGE_URL)
+    response = requests.get(
+        OWID_AGE_URL,
+        headers={"User-Agent": "Mozilla/5.0"},
+        timeout=30,
+    )
+    response.raise_for_status()
 
-    # Converte as colunas de faixas etárias para o formato "longo"
+    df = pd.read_csv(io.BytesIO(response.content))
+
     df = df.melt(
         id_vars=["Entity", "Code", "Year"],
         var_name="Age_Group",
@@ -17,10 +24,8 @@ def load_owid_age_data():
 
     df = sort_by_country_and_age_group(df)
 
-    # Remove registros sem código ISO3
     df = df.dropna(subset=["Code"])
 
-    # Padroniza os nomes das colunas para o formato utilizado no projeto.
     df = df.rename(
         columns={
             "Entity": "country",
@@ -51,3 +56,6 @@ def sort_by_country_and_age_group(df):
     return df.sort_values(
         ["Entity", "Age_Group"],
     )
+
+def build_country_table():
+  pass
