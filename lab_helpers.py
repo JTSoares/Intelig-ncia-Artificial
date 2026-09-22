@@ -4,6 +4,13 @@ import requests
 
 OWID_AGE_URL = "https://ourworldindata.org/grapher/cantril-ladder-age-groups.csv"
 
+AGE_MID = {
+    "Up to 29 years": 24.5,
+    "30-44 years": 37.0,
+    "45-59 years": 52.0,
+    "60+ years": 70.0
+}
+
 def load_owid_age_data():
     """Carrega e prepara os dados de felicidade da OWID por faixa etária."""
 
