@@ -29,7 +29,7 @@ A estrutura do conjunto de dados impõe uma simplificação severa da realidade 
 - [Our World in Data: Self-reported life satisfaction by age](https://ourworldindata.org/grapher/cantril-ladder-age-groups?tab=table)
 - [The Happiness Curve (Macmillan)](https://us.macmillan.com/books/9781427292988/thehappinesscurve/)
 
-### Fonte de Dados
+### Fontes de Dados
 - GALLUP; OXFORD WELLBEING RESEARCH CENTRE; UN SUSTAINABLE DEVELOPMENT SOLUTIONS NETWORK. World Happiness Report. Data Figure 2.1. Disponível em: https://files.worldhappiness.report/WHR26_Data_Figure_2.1.xlsx. Acesso em: 22 set. 2026.   
 IPYNB
 
