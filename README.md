@@ -14,7 +14,7 @@ Para replicar este ambiente de desenvolvimento e executar a modelagem localmente
 Abra o arquivo do notebook e garanta uma execução limpa navegando pelo menu em Kernel → Restart & Run All.
 
 ### Principais resultados
-![Curvas de Probabilidade de Classificação 'Feliz'](curvas_probabilidade_feliz.png)
+![Curvas de Probabilidade de Classificação 'Feliz'](imagens/curvas_probabilidade_feliz.png)
 
 Os resultados demonstram que os indicadores macroeconômicos, com destaque para o logaritmo do PIB per capita, atuam como um fator estrutural que define o patamar basal de probabilidade de um país ser classificado como feliz na Escada de Cantril. Ao isolar a variável idade nos classificadores, nota-se que a clássica hipótese da "curva em U" perde sustentação estatística. O modelo logístico capturou uma tendência de queda contínua na satisfação com a vida à medida que a idade avança, já que o termo quadrático (age_sq) não obteve ganho preditivo suficiente para confirmar uma recuperação clara do bem-estar na velhice dentro da amostra global analisada.
 
